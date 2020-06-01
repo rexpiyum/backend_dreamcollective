@@ -10,4 +10,6 @@ module.exports = function(app) {
     .get(response.readResponse)
     .put(response.updateResponse)
     .delete(response.deleteResponse);
+  
+  app.route("/responses/topic/:topicId").get(response.listAllResponsesOfTopic);
 };
