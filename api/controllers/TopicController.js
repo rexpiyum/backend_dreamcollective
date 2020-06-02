@@ -4,12 +4,14 @@ var mongoose = require('mongoose'),
 
 exports.listAllTopics = function(req, res) {
 
-  Topic.find({}, function(err, topic) {
-    if (err)
-      res.send(err);
+  Topic.find({}, function (err, topic) {
+    if (err) res.send(err);
     res.json(topic);
     console.log(topic);
-  }).sort({Created_date:1}).populate('prompts').populate('createdBy');
+  })
+    .sort({ createdDate: -1 })
+    .populate("prompts")
+    .populate("createdBy");
 };
 
 exports.createTopic = function(req, res) {
