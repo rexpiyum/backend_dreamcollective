@@ -12,4 +12,6 @@ module.exports = function(app) {
     .get(prompt.readPrompt)
     .put(prompt.updatePrompt)
     .delete(prompt.deletePrompt);
+  
+  app.route("/prompts/topic/:topicId").get(prompt.listAllPromptsOfTopic);
 };

@@ -8,6 +8,13 @@ exports.listAllPrompts = function(req, res) {
   });
 };
 
+exports.listAllPromptsOfTopic = function (req, res) {
+  Prompt.find({ topic: req.params.topicId }, function (err, prompt) {
+    if (err) res.send(err);
+    res.json(prompt);
+  });
+};
+
 exports.createPrompt = function(req, res) {
   var newPrompt = new Prompt(req.body);
   newPrompt.save(function(err, prompt) {
