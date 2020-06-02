@@ -9,7 +9,7 @@ exports.listAllTopics = function(req, res) {
       res.send(err);
     res.json(topic);
     console.log(topic);
-  }).sort({Created_date:-1}).populate('prompts').populate('createdBy');
+  }).sort({Created_date:1}).populate('prompts').populate('createdBy');
 };
 
 exports.createTopic = function(req, res) {
