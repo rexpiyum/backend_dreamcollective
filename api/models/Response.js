@@ -13,28 +13,33 @@ var responseSchema = new Schema({
     type: String,
   },
 
-  topic: {type: mongoose.Schema.Types.ObjectId, ref: 'Topic'},
+  topic: { type: mongoose.Schema.Types.ObjectId, ref: "Topic" },
 
-  features: [{type: mongoose.Schema.Types.ObjectId, ref: 'Feature'}],
+  features: [{ type: mongoose.Schema.Types.ObjectId, ref: "Feature" }],
 
   inputs: [
     {
-      prompt: {type: mongoose.Schema.Types.ObjectId, ref: 'Prompt'},
-      text: {type:String}
-  }],
+      prompt: { type: mongoose.Schema.Types.ObjectId, ref: "Prompt" },
+      text: { type: String },
+    },
+  ],
 
-  createdBy: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
+  createdBy: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
 
   isFlagged: {
     type: Boolean,
-    default: false
+    default: false,
+  },
+
+  isPublished: {
+    type: Boolean,
+    default: false,
   },
 
   createdDate: {
     type: Date,
-    default: Date.now
+    default: Date.now,
   },
-  
 });
 
 responseSchema.plugin(random);
