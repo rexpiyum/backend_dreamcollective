@@ -1,15 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.f755133e.chunk.css",
-    "main.js": "/static/js/main.04be53da.chunk.js",
-    "main.js.map": "/static/js/main.04be53da.chunk.js.map",
+    "main.js": "/static/js/main.4278705c.chunk.js",
+    "main.js.map": "/static/js/main.4278705c.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.f9eb476b.js",
     "runtime~main.js.map": "/static/js/runtime~main.f9eb476b.js.map",
-    "static/js/2.2b8b4f94.chunk.js": "/static/js/2.2b8b4f94.chunk.js",
-    "static/js/2.2b8b4f94.chunk.js.map": "/static/js/2.2b8b4f94.chunk.js.map",
+    "static/css/2.11527b07.chunk.css": "/static/css/2.11527b07.chunk.css",
+    "static/js/2.6ab7cb8d.chunk.js": "/static/js/2.6ab7cb8d.chunk.js",
+    "static/js/2.6ab7cb8d.chunk.js.map": "/static/js/2.6ab7cb8d.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.2a7bbf5292e327695c567c904728c38d.js": "/precache-manifest.2a7bbf5292e327695c567c904728c38d.js",
+    "precache-manifest.d3f0db7c116b1d864b748132aa118f8a.js": "/precache-manifest.d3f0db7c116b1d864b748132aa118f8a.js",
     "service-worker.js": "/service-worker.js",
+    "static/css/2.11527b07.chunk.css.map": "/static/css/2.11527b07.chunk.css.map",
     "static/css/main.f755133e.chunk.css.map": "/static/css/main.f755133e.chunk.css.map",
     "static/media/add_icon.svg": "/static/media/add_icon.26f9a2be.svg",
     "static/media/collaborate.svg": "/static/media/collaborate.46975860.svg",
@@ -23,7 +25,7 @@
     "static/media/product.svg": "/static/media/product.3836514b.svg",
     "static/media/remove_icon.svg": "/static/media/remove_icon.59fd19b4.svg",
     "static/media/right_arrow_icon.svg": "/static/media/right_arrow_icon.98b839f2.svg",
-    "static/media/service.svg": "/static/media/service.b5431581.svg",
-    "static/media/space.svg": "/static/media/space.4fe61697.svg"
+    "static/media/service.svg": "/static/media/service.cd7774da.svg",
+    "static/media/space.svg": "/static/media/space.5aa77929.svg"
   }
 }
