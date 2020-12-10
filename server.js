@@ -17,7 +17,9 @@ require("./api/models/Prompt");
 //   useNewUrlParser: true
 // });
 
-mongoose.connect('mongodb://cloud_collective:canonkissX4@ds221095.mlab.com:21095/dream_collective',{ useNewUrlParser: true, useUnifiedTopology: true });
+mongodb + srv://cloud_collective:canonkissX4@dream-collective.rgnry.mongodb.net/dream_collective?retryWrites=true&w=majority
+mongoose.connect('mongodb + srv://cloud_collective:canonkissX4@dream-collective.rgnry.mongodb.net/dream_collective?retryWrites=true&w=majority',{ useNewUrlParser: true, useUnifiedTopology: true });
+//mongoose.connect('mongodb://cloud_collective:canonkissX4@ds221095.mlab.com:21095/dream_collective',{ useNewUrlParser: true, useUnifiedTopology: true });
 //mongoose.connect('mongodb://cknew:canonkissX4@ds131109.mlab.com:31109/cknew',{ useNewUrlParser: true });
 
 app.use(bodyParser.urlencoded({ extended: true }));
