@@ -3,7 +3,7 @@ var express = require("express"),
   port = process.env.PORT || 80,
   mongoose = require("mongoose"),
   bodyParser = require("body-parser");
-  const path = require('path');
+const path = require("path");
 
 require("./api/models/Response");
 require("./api/models/Feature");
@@ -17,8 +17,15 @@ require("./api/models/Prompt");
 //   useNewUrlParser: true
 // });
 
-mongodb + srv://cloud_collective:canonkissX4@dream-collective.rgnry.mongodb.net/dream_collective?retryWrites=true&w=majority
-mongoose.connect('mongodb + srv://cloud_collective:canonkissX4@dream-collective.rgnry.mongodb.net/dream_collective?retryWrites=true&w=majority',{ useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose.connect(
+//   "mongodb+srv://dream_drone_user:canonkissX4@dream-drone-prod.1fwfk.mongodb.net/dream_drone_prod?retryWrites=true&w=majority",
+//   { useNewUrlParser: true, useUnifiedTopology: true }
+// );
+//mongodb + srv://cloud_collective:canonkissX4@dream-collective.rgnry.mongodb.net/dream_collective?retryWrites=true&w=majority
+mongoose.connect(
+  "mongodb+srv://cloud_collective:canonkissX4@dream-collective.rgnry.mongodb.net/dream_collective?retryWrites=true&w=majority",
+  { useNewUrlParser: true, useUnifiedTopology: true }
+);
 //mongoose.connect('mongodb://cloud_collective:canonkissX4@ds221095.mlab.com:21095/dream_collective',{ useNewUrlParser: true, useUnifiedTopology: true });
 //mongoose.connect('mongodb://cknew:canonkissX4@ds131109.mlab.com:31109/cknew',{ useNewUrlParser: true });
 
@@ -26,7 +33,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + "/public"));
 
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
     "Access-Control-Allow-Headers",
@@ -46,10 +53,9 @@ routes(app);
 routes = require("./api/routes/PromptRoutes"); //importing route
 routes(app);
 
-
 // Handles any requests that don't match the ones above
-app.get('*', (req,res) =>{
-  res.sendFile(path.join(__dirname+'/public/index.html'));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "/public/index.html"));
 });
 let server = app.listen(port);
 
