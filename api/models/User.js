@@ -17,11 +17,14 @@ var userSchema = new Schema({
     index: Number,
     value: String,
   },
-
   gender: {
-    index: Number,
-    value: String,
+    type: String,
   },
+
+  // gender: {
+  //   index: Number,
+  //   value: String,
+  // },
 
   country: {
     index: Number,
