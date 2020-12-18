@@ -28,7 +28,7 @@ exports.read_a_user = function (req, res) {
 
 exports.read_a_user_by_cognito_username = function (req, res) {
   console.log(req.params.cognito_username);
-  User.find(
+  User.findOne(
     { cognito_username: req.params.cognito_username },
     function (err, user) {
       if (err) res.send(err);
