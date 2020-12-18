@@ -1,8 +1,11 @@
-var mongoose = require('mongoose');
+var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
-
 var userSchema = new Schema({
+  cognito_username: {
+    type: String,
+  },
+
   email: {
     type: String,
   },
@@ -10,34 +13,29 @@ var userSchema = new Schema({
     type: String,
   },
 
-  isOwning: {
-    index: Number,
-    value: String
-  },
-
   ageRange: {
     index: Number,
-    value: String
+    value: String,
   },
 
   gender: {
     index: Number,
-    value: String
+    value: String,
   },
 
   country: {
     index: Number,
-    value: String
+    value: String,
   },
 
   background: {
-    value: String
+    value: String,
   },
 
   createdDate: {
     type: Date,
-    default: Date.now
-  }
+    default: Date.now,
+  },
 });
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model("User", userSchema);
